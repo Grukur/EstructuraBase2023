@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg bg-light sticky-top" id="nav">
+    <div class="container py-2">
+        <h1>
+            <a class="navbar-brand fs-1" href="/">MUNDO EDUC</a>
+        </h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav text-center ms-auto">
+                <li class="nav-item">
+                    <a class="active nav-link" aria-current="page" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/bootcamp">Bootcamps</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/enrollments">Inscripciones</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link" id="cuentasNav" href="/api/contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .nav-link{
+        text-decoration: none;
+        color: black;
+        font-size: 19px;
+    }
+    .nav-link:hover{
+        color: rgb(0, 166, 116);
+        font-weight: bold;
+    }
+    h1{
+        font-family: 'Archivo Black', sans-serif;
+    }
+    h1{
+        background: linear-gradient(60deg, rgb(170, 164, 255), rgb(0, 85, 255) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    @media (max-width: 991px){
+        h1{
+            display: none;
+        }
+    }
+</style>

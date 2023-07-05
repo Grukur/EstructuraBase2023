@@ -1,7 +1,5 @@
 import sequelize from './app/database/db.js';
 import app from './app/app.js';
-import 'dotenv/config.js';
-
 
 const main = async() => {
     try{

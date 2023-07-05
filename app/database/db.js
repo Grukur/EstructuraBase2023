@@ -9,8 +9,8 @@ let database, username, password, host;
 let dialectOptions = null;
 
 if (process.env.NODE_ENV.includes("production")) {
-    let rutaEnv = path.resolve(__dirname, "../../.env.production");
-    config({ path: rutaEnv });
+    //let rutaEnv = path.resolve(__dirname, "../../.env.production");
+    //config({ path: rutaEnv });
     dialectOptions = {
         ssl: {
             require: true,
@@ -18,8 +18,8 @@ if (process.env.NODE_ENV.includes("production")) {
         },
     };
 } else {
-    let rutaEnv = path.resolve(__dirname, "../../.env");
-    config({ path: rutaEnv });
+    //let rutaEnv = path.resolve(__dirname, "../../.env");
+    //config({ path: rutaEnv });
 }
 
 database = process.env.DB_DATABASE;

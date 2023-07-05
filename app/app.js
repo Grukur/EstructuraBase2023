@@ -16,12 +16,12 @@ const app = express();
 
 //handlebars
 const hbs = create({
-    partialsDir: [path.join(__dirname, 'views/partials')],
+    partialsDir: [path.resolve(__dirname, './views/partials')],
 });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.resolve(__dirname, './views'));
 
 //MIDDLEWARES
 app.use(cors());
@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended:true}));
 app.use(upload());
 
 //publicamos boostrap
-app.use('/boostrap', express.static('./node_modules/bootstrap/dist/'));
+app.use('/bootstrap', express.static(path.resolve(__dirname, '../node_modules/bootstrap/dist/')));
 
 //hacemos publica la carpeta publica
 app.use('/public', express.static('public'));

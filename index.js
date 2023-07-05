@@ -1,6 +1,9 @@
 import sequelize from './app/database/db.js';
 import app from './app/app.js';
 
+//modelos
+import './app/models/Producto.models.js';
+
 const main = async() => {
     try{
         await sequelize.authenticate();
